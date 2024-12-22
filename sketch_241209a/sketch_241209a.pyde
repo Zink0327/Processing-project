@@ -31,23 +31,31 @@ def drawcube(cube_id):
     fill(cube_color[cube_id])
     box(60)
     popMatrix()
+    """
+    pushMatrix()
+    translate(cube_pos[cube_id][0]*30, cube_pos[cube_id][1]*30, cube_pos[cube_id][2]*30)
+    rect
+    box(60)
+    popMatrix()
+    """
     
 def L():
-    cube_pos[rfu][0]*=1
-    cube_pos[rfu][1]*=1
-    cube_pos[rfu][2]*=-1
+    cube_pos[lfu][0]*=1
+    cube_pos[lfu][1]*=1
+    cube_pos[lfu][2]*=-1
     
-    cube_pos[rfd][0]*=1
-    cube_pos[rfd][1]*=1
-    cube_pos[rfd][2]*=-1
+    cube_pos[lfd][0]*=1
+    cube_pos[lfd][1]*=1
+    cube_pos[lfd][2]*=-1
     
-    cube_pos[rbu][0]*=1
-    cube_pos[rbu][1]*=1
-    cube_pos[rbu][2]*=-1
+    cube_pos[lbu][0]*=1
+    cube_pos[lbu][1]*=1
+    cube_pos[lbu][2]*=-1
     
-    cube_pos[rbd][0]*=1
-    cube_pos[rbd][1]*=1
-    cube_pos[rbd][2]*=-1
+    cube_pos[lbd][0]*=1
+    cube_pos[lbd][1]*=1
+    cube_pos[lbd][2]*=-1
+
 def R():
     cube_pos[rfu][0]*=1
     cube_pos[rfu][1]*=-1
@@ -153,6 +161,9 @@ def setup():
 def draw():
     global x,y,z,a
     translate(x,y,z)
-    if keyPressed
+    if mousePressed:
+        camera(mouseX,mouseY,(y)/tan(PI/6),x,y,0,0,1,0)
+    if keyPressed:
+        if 
     background(200)
     batch_draw()
